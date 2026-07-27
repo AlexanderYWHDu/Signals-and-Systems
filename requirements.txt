@@ -1,0 +1,15 @@
+# Core stack for the notebooks.
+numpy>=1.24
+scipy>=1.12          # ShortTimeFFT (used in notebook 03) needs 1.12+
+matplotlib>=3.6
+pandas>=2.0
+seaborn>=0.13        # the objects interface and current errorbar= API
+
+# Notebook environment.
+jupyterlab>=4.0
+ipykernel>=6.0
+ipywidgets>=8.0      # only for the interactive exercise in notebook 02
+
+# Optional, used by a few cells.
+jinja2>=3.0          # DataFrame .style rendering (notebook 04)
+tabulate>=0.9        # DataFrame .to_markdown() (notebook 04)
