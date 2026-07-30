@@ -1,8 +1,9 @@
 # Signals and Systems — Python Practice
 
-Scientific Python worked through as coding practice for a Signals and Systems course. Five
-notebooks, each covering one library, all of them using signals-and-systems problems as the
-worked examples rather than generic tutorial data.
+Scientific Python worked through as coding practice for a Signals and Systems course. Six
+notebooks: five covering one library each, plus one covering the central theorem of the
+course. All of them use signals-and-systems problems as the worked examples rather than
+generic tutorial data.
 
 The framing throughout: **MATLAB is the classroom tool, but `numpy` + `scipy.signal` do the
 same job and are what you would reach for outside a classroom.** `signal.butter`, `freqz`,
@@ -10,6 +11,8 @@ same job and are what you would reach for outside a classroom.** `signal.butter`
 name.
 
 ## Notebooks
+
+### Tools
 
 | # | Notebook | What it covers |
 |---|----------|----------------|
@@ -19,9 +22,16 @@ name.
 | 04 | [Pandas for signal data](notebooks/04_pandas_for_signal_data.ipynb) | Loading messy instrument logs, sentinels and dropouts, `DatetimeIndex` and `resample`, rolling windows, bridging to SciPy, `groupby` over experiment sweeps, wide/long reshaping |
 | 05 | [Seaborn for signal analysis](notebooks/05_seaborn_for_signal_analysis.ipynb) | Where seaborn helps (distributions, repeated trials, categorical comparisons, facets) and — explicitly — where it does not |
 
-Work them in order. 01 and 02 are prerequisites for the rest; 03 is the one that maps most
-directly onto course content; 04 and 05 are about handling real measurements and comparing
-experiments.
+### Theory
+
+| # | Notebook | What it covers |
+|---|----------|----------------|
+| 06 | [LTI systems and convolution](notebooks/06_lti_systems_and_convolution.ipynb) | Linearity and time-invariance tested numerically on six systems, the impulse as a basis, **convolution derived from scratch**, a black-box experiment that predicts a system's response from one impulse measurement, flip-and-slide, convolution properties, cascade/parallel, continuous-time convolution, causality and BIBO stability, step ↔ impulse response, **eigenfunctions and the convolution theorem**, circular-convolution traps, overlap-add, deconvolution and why it is ill-posed, plus 1-D and 2-D applications |
+
+Work 01 and 02 first — they are prerequisites for everything else. After that, **06 is the
+conceptual centre of the course** and 03 is the practical toolbox; either order works, and
+they reinforce each other. 04 and 05 are about handling real measurements and comparing
+experiments, and can be picked up whenever you have data to wrangle.
 
 Every notebook ends with exercises that have **no published solutions**. Verifying your own
 answer numerically is the skill being practised.
